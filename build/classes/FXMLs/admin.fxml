@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="370.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <Label layoutX="193.0" layoutY="59.0" prefHeight="17.0" prefWidth="121.0" text="Account Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Epassword" focusTraversable="false" layoutX="200.0" layoutY="125.0" prefHeight="30.0" promptText="Password" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Eusername" focusTraversable="false" layoutX="202.0" layoutY="88.0" prefHeight="30.0" promptText="Username" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <DatePicker fx:id="Ebirthday" focusTraversable="false" layoutX="14.0" layoutY="227.0" prefHeight="30.0" prefWidth="149.0" promptText="Birthday" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Eemail" focusTraversable="false" layoutX="14.0" layoutY="118.0" prefHeight="30.0" promptText="Email" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Ephone" focusTraversable="false" layoutX="15.0" layoutY="79.0" prefHeight="30.0" promptText="Phone" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Ename" focusTraversable="false" layoutX="14.0" layoutY="39.0" prefHeight="30.0" promptText="Name" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Eaddress" focusTraversable="false" layoutX="14.0" layoutY="154.0" prefHeight="30.0" promptText="Address" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <Label layoutX="14.0" layoutY="14.0" text="Basic Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="193.0" layoutY="174.0" prefHeight="21.0" prefWidth="150.0" text="Department Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combo1" editable="true" focusTraversable="false" layoutX="201.0" layoutY="197.0" prefHeight="30.0" prefWidth="150.0" promptText="Department" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" visibleRowCount="8" AnchorPane.topAnchor="200.0" />
+            <DatePicker fx:id="Edate" focusTraversable="false" layoutX="200.0" layoutY="236.0" prefHeight="30.0" prefWidth="149.0" promptText="Date Joining" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Esalary" focusTraversable="false" layoutX="200.0" layoutY="272.0" prefHeight="30.0" promptText="Salary" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <Separator layoutX="183.0" layoutY="165.0" prefHeight="4.0" prefWidth="184.0" />
+            <Separator layoutX="179.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="6.0" />
+            <TextField fx:id="Essn" focusTraversable="false" layoutX="14.0" layoutY="191.0" prefHeight="30.0" promptText="SSN" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <ComboBox fx:id="Egender" layoutX="15.0" layoutY="266.0" prefHeight="29.0" prefWidth="149.0" promptText="Gender" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <Button fx:id="clear" layoutX="305.0" layoutY="9.0" mnemonicParsing="false" onAction="#clear" prefHeight="24.0" prefWidth="51.0" styleClass="btn-update" stylesheets="@../Styles/SystemStyles.css" text="Clear" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="4.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="108.0" fitWidth="114.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/images-removebg-preview%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="801.0" layoutY="551.0" mnemonicParsing="false" onAction="#openAnalysis" prefHeight="35.0" prefWidth="135.0" styleClass="btn-save1" stylesheets="@../Styles/SystemStyles.css" text="Statistics" />
+      <ImageView fitHeight="31.0" fitWidth="48.0" layoutX="807.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icon-statistics-12-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="860.0" layoutY="9.0" mnemonicParsing="false" onAction="#logout" prefHeight="29.0" prefWidth="83.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="LogOut" />
+      <TableView fx:id="AdminTable" layoutX="397.0" layoutY="133.0" onMouseClicked="#getSelected" prefHeight="371.0" prefWidth="546.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="82.0" text="Name" />
+            <TableColumn fx:id="phone" prefWidth="86.0" text="Phone" />
+            <TableColumn fx:id="address" prefWidth="87.0" text="Address" />
+            <TableColumn fx:id="gender" prefWidth="48.0" text="Gender" />
+            <TableColumn fx:id="dob" prefWidth="87.0" text="Date of Birth" />
+            <TableColumn fx:id="username" prefWidth="68.0" text="Username" />
+            <TableColumn fx:id="password" prefWidth="77.0" text="Password" />
+            <TableColumn fx:id="ssn" text="SSN" />
+            <TableColumn fx:id="depart" prefWidth="79.0" text="Department" />
+            <TableColumn fx:id="salary" prefWidth="67.0" text="Salary" />
+            <TableColumn fx:id="dateJoin" prefWidth="94.0" text="Date Joining" />
+            <TableColumn fx:id="email" prefWidth="85.0" text="Email" />
+        </columns>
+      </TableView>
+      <Pane layoutX="35.0" layoutY="504.0" prefHeight="41.0" prefWidth="333.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <Button fx:id="add" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#AddEmployee" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="    Add" />
+            <Button layoutX="224.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteEmployee" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="     Delete " />
+            <Button fx:id="update" layoutX="119.0" layoutY="5.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="31.0" prefWidth="95.0" styleClass="btn-update" stylesheets="@../Styles/SystemStyles.css" text="    Update " />
+            <ImageView fitHeight="30.0" fitWidth="63.0" layoutX="109.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Picture4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="224.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/166260.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="132.0" prefHeight="41.0" prefWidth="364.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="31.0" layoutX="36.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/122932.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" layoutX="67.0" layoutY="5.0" onKeyPressed="#search" prefHeight="31.0" prefWidth="251.0" promptText="Search" style="-fx-background-radius: 10px;" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="860.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/transparent-web-interface-icons-icon-logout-icon-5f8bbf9bc2f138.8715297616029940757985-removebg-preview%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

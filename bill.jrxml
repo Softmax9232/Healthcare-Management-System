@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bill" pageWidth="400" pageHeight="500" columnWidth="360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9721e2a9-fb00-4563-ba31-888e59a9e5c2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (15)"/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="date" class="java.sql.Date"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `Name`,`Payment_date`, `Examination_cost`, `medicine_cost`, `test_cost`, `room_cost` ,`Total` FROM `bill`,`patient` 
+WHERE `patient`.`ID`=`bill`.`id` 
+and `bill`.`Payment_date`= $P{date}   
+and `bill`.`Patient_Id`= $P{id}]]>
+	</queryString>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="Payment_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="Payment_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="Payment_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<field name="Examination_cost" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="Examination_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="Examination_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<field name="medicine_cost" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="medicine_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicine_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<field name="test_cost" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="test_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="test_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<field name="room_cost" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="room_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="room_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<field name="Total" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="Total"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bill"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="460" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="-11" y="-8" width="80" height="64" uuid="93e97c20-d62a-4836-9ba5-07f3cd10283e"/>
+				<imageExpression><![CDATA["bill report img.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="40" y="10" width="240" height="20" forecolor="#0F4273" uuid="5ec81882-f28b-4a0b-a71d-8fd3065afc11"/>
+				<textElement>
+					<font fontName="Aharoni" size="13"/>
+				</textElement>
+				<text><![CDATA[HealthCare Management System]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="70" width="80" height="50" forecolor="#0F4273" uuid="4179ed2b-2b52-48fa-a5be-31e9704d5170"/>
+				<textElement>
+					<font fontName="Aharoni" size="40"/>
+				</textElement>
+				<text><![CDATA[Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="340" width="100" height="30" forecolor="#0F4273" uuid="a431ffe2-a670-4312-8af6-0445295a13af"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="12"/>
+				</textElement>
+				<text><![CDATA[Examination Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="260" width="92" height="20" forecolor="#0F4273" uuid="91c7b910-0bc4-4bc8-9f51-2be94321e7d7"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="12"/>
+				</textElement>
+				<text><![CDATA[Test Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="220" width="92" height="20" forecolor="#0F4273" uuid="9a2f3286-edd2-451f-95d3-78ec72098591"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="12"/>
+				</textElement>
+				<text><![CDATA[Medicine Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="300" width="92" height="20" forecolor="#0F4273" uuid="504b2cb2-e238-43c6-8d4d-9325356f2b6e"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="12"/>
+				</textElement>
+				<text><![CDATA[Room Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="410" width="80" height="20" forecolor="#208DA1" uuid="5ec0d8cf-82c7-4583-a2c4-52bc77910618"/>
+				<box topPadding="2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="16"/>
+				</textElement>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="178" width="100" height="24" forecolor="#0F4273" uuid="4a15737c-9673-4cce-bd93-2242f8c2a462"/>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="171" width="360" height="1" forecolor="#208DA1" uuid="425c9146-d5c0-4000-8ea6-9884ca7276c9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="400" width="361" height="1" forecolor="#208DA1" uuid="b1bcdada-b12c-4ff0-a99b-13d53994b6e1"/>
+			</line>
+			<line>
+				<reportElement x="170" y="171" width="1" height="279" forecolor="#208DA1" uuid="a1833d0b-674b-4a6e-a687-260bb168f5e4"/>
+			</line>
+			<line>
+				<reportElement x="0" y="450" width="361" height="1" forecolor="#208DA1" uuid="8b43025d-5b67-4abb-9bf4-04202c352867"/>
+			</line>
+			<line>
+				<reportElement x="360" y="170" width="1" height="281" forecolor="#208DA1" uuid="cf5d1cff-3641-4a56-81ee-fccba0b2f12a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="171" width="1" height="281" forecolor="#208DA1" uuid="4348ee71-a1c8-4319-bb55-1d087d8a9b9e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="210" width="360" height="1" forecolor="#208DA1" uuid="95e863ce-7daa-4453-9f19-2e3ff8b23744"/>
+			</line>
+			<textField>
+				<reportElement x="190" y="340" width="190" height="30" forecolor="#0F4273" uuid="eb479648-72bf-4df9-9bde-6e12e707d334"/>
+				<textElement>
+					<font fontName="Aharoni" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Examination_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="260" width="190" height="20" forecolor="#0F4273" uuid="9bdf3a6c-e852-4a4d-a6b2-111adee965dd"/>
+				<textElement>
+					<font fontName="Aharoni" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{test_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="299" width="190" height="25" forecolor="#0F4273" uuid="3955c282-47f1-4728-b798-4cdfae3f774f"/>
+				<textElement>
+					<font fontName="Aharoni" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{room_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="220" width="190" height="20" forecolor="#0F4273" uuid="754b92bc-7bd4-4377-8b81-76b9547e17af"/>
+				<textElement>
+					<font fontName="Aharoni" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicine_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="410" width="100" height="30" forecolor="#208DA1" uuid="02d6646c-b97d-43a7-a03c-08c40c0a08b7"/>
+				<textElement>
+					<font fontName="Aharoni" size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="130" width="220" height="20" forecolor="#208DA1" uuid="9e1433d4-7125-4b95-8f9f-a6c5248dce54"/>
+				<textElement>
+					<font fontName="Aharoni" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Payment_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="130" width="90" height="20" forecolor="#0F4273" uuid="fbd6a215-67b7-48a4-a83f-5fc57586d579">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Aharoni" size="13"/>
+				</textElement>
+				<text><![CDATA[Payment Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="171" width="100" height="30" forecolor="#0F4273" uuid="152c83f9-3c42-454f-8434-d47bc09e9a85"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

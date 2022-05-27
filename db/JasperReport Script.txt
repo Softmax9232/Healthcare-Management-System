@@ -1,0 +1,24 @@
+// prescription
+
+SELECT `Name`,
+	`appointment`,
+	`diagnosis`,
+	`E_Name`,
+	`next_appointment`
+FROM `patient appointments`,
+	`patient`,
+	`employee`
+WHERE 
+	 `patient appointments`.`patient_id`= `patient`.`ID` 
+	 AND `patient appointments`.doc_id = `employee`.`Employee_Id` 
+	 AND `patient`.`ID` = $P{Patient_ID} 
+	 AND `employee`.`E_Name` = $P{Doctor_name}
+	 AND `Appointment`= $P{Appointment}
+
+// bill
+
+SELECT `Name`,`Payment_date`, `Examination_cost`, `medicine_cost`, `test_cost`, `room_cost` ,`Total` 
+FROM `bill`,`patient` 
+WHERE `patient`.`ID`=`bill`.`id` 
+and `bill`.`Payment_date`= $P{date}   
+and `bill`.`Patient_Id`= $P{id}

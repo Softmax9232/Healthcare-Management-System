@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="doctor prescription" pageWidth="500" pageHeight="792" columnWidth="460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4567892-1c00-41c7-8038-5d4e485fcf5e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (14)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="Patient_ID" class="java.lang.String"/>
+	<parameter name="Appointment" class="java.lang.String"/>
+	<parameter name="Doctor_name" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `Name`,
+	`appointment`,
+	`diagnosis`,
+	`E_Name`,
+	`next_appointment`
+FROM `patient appointments`,
+	`patient`,
+	`employee`
+WHERE 
+	 `patient appointments`.`patient_id`= `patient`.`ID` 
+	 AND `patient appointments`.doc_id = `employee`.`Employee_Id` 
+	 AND `patient`.`ID` = $P{Patient_ID} 
+	 AND `employee`.`E_Name` = $P{Doctor_name}
+	 AND `Appointment`= $P{Appointment}]]>
+	</queryString>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="appointment" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="Appointment"/>
+		<property name="com.jaspersoft.studio.field.label" value="appointment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient appointments"/>
+	</field>
+	<field name="diagnosis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="diagnosis"/>
+		<property name="com.jaspersoft.studio.field.label" value="diagnosis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient appointments"/>
+	</field>
+	<field name="E_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="E_Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="E_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="next_appointment" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="next_appointment"/>
+		<property name="com.jaspersoft.studio.field.label" value="next_appointment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient appointments"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="480" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="-10" y="-10" width="80" height="64" uuid="681f0d6b-3cac-41e8-a8ab-1b942e222552"/>
+				<imageExpression><![CDATA["bill report img.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="51" y="10" width="240" height="20" forecolor="#0F4273" uuid="27029f7d-3e70-4ff9-be52-280ff1ecb9da"/>
+				<textElement>
+					<font fontName="Aharoni" size="13"/>
+				</textElement>
+				<text><![CDATA[HealthCare Management System]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="50" width="130" height="30" forecolor="#0F4273" uuid="ae0a7cc8-bf84-4640-94a6-d2cb46b34659"/>
+				<textElement>
+					<font fontName="Aharoni" size="20"/>
+				</textElement>
+				<text><![CDATA[Prescription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="120" width="30" height="20" forecolor="#0F4273" uuid="112137eb-aada-4db2-9360-6cfb1561e4f9"/>
+				<textElement>
+					<font fontName="Aharoni" size="18"/>
+				</textElement>
+				<text><![CDATA[Dr.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="120" width="180" height="20" forecolor="#0F4273" uuid="f2363281-8679-4676-8c4f-c9cbad2e51e2"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{E_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="180" width="51" height="20" forecolor="#0F4273" uuid="ee266832-daa0-42b3-be98-3139a797fc80"/>
+				<textElement>
+					<font fontName="Aharoni" size="15"/>
+				</textElement>
+				<text><![CDATA[Name: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="210" width="135" height="20" forecolor="#0F4273" uuid="428380eb-7fbe-4cef-a081-bf36e200b3fc"/>
+				<textElement>
+					<font fontName="Aharoni" size="13"/>
+				</textElement>
+				<text><![CDATA[Date of Consultation: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="208" width="150" height="20" forecolor="#0F4273" uuid="e6344afa-e170-4a25-b784-ad61fc6f3384">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{appointment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="290" width="70" height="40" forecolor="#0F4273" uuid="3f6d62d1-f695-4419-a0a1-d56da78429bf"/>
+				<textElement>
+					<font fontName="Bodoni MT Black" size="30"/>
+				</textElement>
+				<text><![CDATA[Rx]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="330" width="360" height="120" forecolor="#17A39A" uuid="05920ace-847c-4ffe-8db6-1af257424bb2"/>
+				<textElement textAlignment="Left">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="177" width="161" height="20" forecolor="#0F4273" uuid="521bfc82-9a53-4a5d-896a-acc5294ac69e">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="205" y="240" width="130" height="20" forecolor="#0F4273" uuid="905f2c87-1c90-4df3-a734-013ba61fe1f0"/>
+				<textElement>
+					<font fontName="Aharoni" size="13"/>
+				</textElement>
+				<text><![CDATA[Next Appointment]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="238" width="150" height="20" forecolor="#0F4273" uuid="dbdf95ea-1a33-46f4-80b9-60c6fdfabf23">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{next_appointment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

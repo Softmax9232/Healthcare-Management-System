@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Healthcare_Management_System.jnlp">
+  <information>
+    <title>Healthcare_Management_System</title>
+    <vendor>Amira Taha</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\aopalliance-1.0.jar" size="4467" download="eager" />
+    <jar href="lib\bcmail-jdk14-1.38.jar" size="192035" download="eager" />
+    <jar href="lib\bcmail-jdk14-138.jar" size="192035" download="eager" />
+    <jar href="lib\bcprov-jdk14-1.38.jar" size="1551468" download="eager" />
+    <jar href="lib\bcprov-jdk14-138.jar" size="1551468" download="eager" />
+    <jar href="lib\bctsp-jdk14-1.38.jar" size="22994" download="eager" />
+    <jar href="lib\castor-core-1.3.3.jar" size="49513" download="eager" />
+    <jar href="lib\castor-xml-1.3.3.jar" size="872827" download="eager" />
+    <jar href="lib\com.jaspersoft.studio.data.drivers_6.18.1.final (1).jar" size="12943391" download="eager" />
+    <jar href="lib\com.jaspersoft.studio.data.drivers_6.18.1.final.jar" size="12943391" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-collections4-4.0.jar" size="610259" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-jcs3-jcache-openjpa-3.1.jar" size="17180" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.1.1-1.0.0.jar" size="64334" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\controlsfx-9.0.0.jar" size="946412" download="eager" />
+    <jar href="lib\controlsfx-samples-8.40.14.jar" size="725707" download="eager" />
+    <jar href="lib\core-2.3.0.jar" size="528506" download="eager" />
+    <jar href="lib\ecj-4.3.1.jar" size="1830791" download="eager" />
+    <jar href="lib\fontawesomefx-commons-8.15.jar" size="20957" download="eager" />
+    <jar href="lib\fontawesomefx-controls-8.15.jar" size="3369" download="eager" />
+    <jar href="lib\fontawesomefx-emojione-2.2.7-2.jar" size="3642164" download="eager" />
+    <jar href="lib\fontawesomefx-fontawesome-4.7.0-5.jar" size="136891" download="eager" />
+    <jar href="lib\fontawesomefx-glyphsbrowser-1.3.0.jar" size="68461" download="eager" />
+    <jar href="lib\fontawesomefx-glyphsbrowser-all-1.0.jar" size="1662483" download="eager" />
+    <jar href="lib\fontawesomefx-icons525-3.0.0-4.jar" size="110545" download="eager" />
+    <jar href="lib\fontawesomefx-materialdesignfont-1.7.22-4.jar" size="197373" download="eager" />
+    <jar href="lib\fontawesomefx-materialicons-2.2.0-5.jar" size="103686" download="eager" />
+    <jar href="lib\fontawesomefx-octicons-4.3.0-5.jar" size="37157" download="eager" />
+    <jar href="lib\fontawesomefx-weathericons-2.0.10-5.jar" size="83098" download="eager" />
+    <jar href="lib\fxsampler-1.0.10.jar" size="30882" download="eager" />
+    <jar href="lib\icu4j-57.1.jar" size="11289823" download="eager" />
+    <jar href="lib\itext-2.1.7.js5.jar" size="1132307" download="eager" />
+    <jar href="lib\jackson-annotations-2.1.4.jar" size="34476" download="eager" />
+    <jar href="lib\jackson-core-2.1.4.jar" size="206866" download="eager" />
+    <jar href="lib\jackson-databind-2.1.4.jar" size="926562" download="eager" />
+    <jar href="lib\jakarta-regexp-1.4.jar" size="28576" download="eager" />
+    <jar href="lib\jasperreports-6.18.1.jar" size="5634011" download="eager" />
+    <jar href="lib\jasperreports-6.3.0.jar" size="5403912" download="eager" />
+    <jar href="lib\jasperreports-annotation-processors-6.18.0.jar" size="19135" download="eager" />
+    <jar href="lib\jasperreports-chart-customizers-6.18.0.jar" size="44914" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.18.1.jar" size="2480416" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.18.1.jar" size="5581049" download="eager" />
+    <jar href="lib\jasperreports-metadata-6.18.0.jar" size="9978" download="eager" />
+    <jar href="lib\javax.inject-1.jar" size="2497" download="eager" />
+    <jar href="lib\jcommon-1.0.23.jar" size="330246" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1565065" download="eager" />
+    <jar href="lib\lucene-analyzers-common-4.5.1.jar" size="1586103" download="eager" />
+    <jar href="lib\lucene-core-4.5.1.jar" size="2297477" download="eager" />
+    <jar href="lib\lucene-queries-4.5.1.jar" size="205195" download="eager" />
+    <jar href="lib\lucene-queryparser-4.5.1.jar" size="384884" download="eager" />
+    <jar href="lib\lucene-sandbox-4.5.1.jar" size="45578" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
+    <jar href="lib\olap4j-0.9.7.309-JS-3.jar" size="445343" download="eager" />
+    <jar href="lib\spring-aop-3.0.6.RELEASE.jar" size="321428" download="eager" />
+    <jar href="lib\spring-asm-3.0.6.RELEASE.jar" size="53082" download="eager" />
+    <jar href="lib\spring-beans-3.0.6.RELEASE.jar" size="556590" download="eager" />
+    <jar href="lib\spring-context-3.0.6.RELEASE.jar" size="670258" download="eager" />
+    <jar href="lib\spring-core-3.0.6.RELEASE.jar" size="382184" download="eager" />
+    <jar href="lib\spring-expression-3.0.6.RELEASE.jar" size="169752" download="eager" />
+    <jar href="lib\stax-1.2.0.jar" size="179346" download="eager" />
+    <jar href="lib\stax-api-1.0-2.jar" size="23346" download="eager" />
+    <jar href="lib\stax-api-1.0.1.jar" size="26514" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Healthcare_Management_System" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Utilities.Main"  name="Healthcare_Management_System" />
+  <update check="always"/>
+</jnlp>

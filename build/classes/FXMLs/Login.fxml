@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainpane" prefHeight="497.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <Pane prefHeight="497.0" prefWidth="703.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="523.0" fitWidth="756.0" layoutY="-8.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/2645%20-%20Copy.jpg" />
+               </image>
+            </ImageView>
+            <Pane fx:id="L_message" layoutX="422.0" layoutY="155.0" prefHeight="317.0" prefWidth="256.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;">
+               <children>
+                  <TextField fx:id="username" focusTraversable="false" layoutX="55.0" layoutY="98.0" prefHeight="34.0" prefWidth="156.0" promptText="Username" style="-fx-background-radius: 15px;" styleClass="username-password" stylesheets="@../Styles/SystemStyles.css" />
+                  <PasswordField fx:id="password" focusTraversable="false" layoutX="55.0" layoutY="147.0" prefHeight="34.0" prefWidth="156.0" promptText="Password" style="-fx-background-radius: 15px;" />
+                  <Button fx:id="loginBtn" layoutX="90.0" layoutY="240.0" mnemonicParsing="false" onAction="#logButtonClicked" prefHeight="26.0" prefWidth="63.0" styleClass="btn-save3" stylesheets="@../Styles/SystemStyles.css" text="Login" />
+                  <Label fx:id="forgetPass" layoutX="85.0" layoutY="200.0" onMouseClicked="#forgetClicked" prefHeight="19.0" prefWidth="171.0" text="Forget Password? Click Here" textFill="#4da9da">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Text fill="#4da9da" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get Started From Login Below !" wrappingWidth="243.0">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="28.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/teplogidrostroy-password-manager-admin-icon-thumbnail-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="43.0" layoutX="28.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/computer-icons-user-icon-design-login-png-favpng-tkx9sa8Ju5ar297kLkuLpFg3T-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.09" height="97.21" radius="59.8275" width="144.1">
+                     <color>
+                        <Color red="0.33725491166114807" green="0.6666666865348816" blue="0.8274509906768799" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Pane>
+            <ImageView fitHeight="97.0" fitWidth="256.0" layoutX="458.0" layoutY="94.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/medical%20Staff.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="102.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Healthcare Management System">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.laboratory_technicianController">
+  <tabs>
+    <Tab text="Patient's Tests">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Pane layoutX="89.0" layoutY="180.0" prefHeight="184.0" prefWidth="245.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+                     <children>
+                        <TextField fx:id="id" focusTraversable="false" layoutX="36.0" layoutY="21.0" prefHeight="33.0" prefWidth="174.0" promptText="Patient id" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                        <DatePicker fx:id="date" focusTraversable="false" layoutX="36.0" layoutY="69.0" prefHeight="31.0" prefWidth="174.0" promptText="Date" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                        <ComboBox fx:id="TestCombo" focusTraversable="false" layoutX="36.0" layoutY="112.0" prefHeight="34.0" prefWidth="174.0" promptText="Tests" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="112.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/istockphoto-1059267494-170667a-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#45a46e" layoutX="122.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient's Tests" wrappingWidth="203.13671875">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="PatientTest" layoutX="452.0" layoutY="129.0" prefHeight="385.0" prefWidth="480.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+                    <columns>
+                        <TableColumn fx:id="PT_id" prefWidth="138.0" text="Patient ID" />
+                        <TableColumn fx:id="PTdate" prefWidth="166.0" text="Date" />
+                        <TableColumn fx:id="PTname" prefWidth="175.0" text="Test name" />
+                    </columns>
+                  </TableView>
+                  <Pane layoutX="29.0" layoutY="129.0" prefHeight="41.0" prefWidth="364.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+                     <children>
+                        <ImageView fitHeight="72.0" fitWidth="31.0" layoutX="36.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/122932.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="PatientSearch" layoutX="67.0" layoutY="5.0" onKeyPressed="#P_search" prefHeight="31.0" prefWidth="251.0" promptText="Search" style="-fx-background-radius: 10px;" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="182.0" layoutY="391.0" mnemonicParsing="false" onAction="#addPatientTest" prefHeight="30.0" prefWidth="58.0" styleClass="btn-save1" stylesheets="@../Styles/SystemStyles.css" text="Save" textFill="WHITE" />
+                  <Button layoutX="860.0" layoutY="6.0" mnemonicParsing="false" onAction="#logout" prefHeight="29.0" prefWidth="83.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="LogOut" />
+                  <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="860.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/transparent-web-interface-icons-icon-logout-icon-5f8bbf9bc2f138.8715297616029940757985-removebg-preview%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content></Tab>
+    <Tab text="Medical Laboratory">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/istockphoto-1059267494-170667a-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="36.0" layoutY="189.0" prefHeight="93.0" prefWidth="341.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+                     <children>
+                        <TextField fx:id="testname" focusTraversable="false" layoutX="77.0" layoutY="14.0" prefHeight="30.0" promptText="Test Name" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                        <TextField fx:id="testcost" focusTraversable="false" layoutX="77.0" layoutY="51.0" prefHeight="30.0" promptText="Cost" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                        <Button fx:id="clear" layoutX="283.0" layoutY="7.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="51.0" styleClass="btn-update" stylesheets="@../Styles/SystemStyles.css" text="Clear" />
+                     </children>
+                  </Pane>
+                  <Text fill="#45a46e" layoutX="110.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical Laboratory" wrappingWidth="249.13671875">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="TestTable" layoutX="475.0" layoutY="140.0" onMouseClicked="#getSelected" prefHeight="384.0" prefWidth="422.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+                     <columns>
+                        <TableColumn fx:id="Tname" prefWidth="220.0" text="Test name" />
+                        <TableColumn fx:id="Tcost" prefWidth="203.0" text="Cost" />
+                     </columns>
+                  </TableView>
+                  <Pane layoutX="42.0" layoutY="291.0" prefHeight="41.0" prefWidth="333.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+                     <children>
+                        <Button fx:id="add" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#addTest" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="    Add" />
+                        <Button layoutX="224.0" layoutY="5.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="     Delete " />
+                        <Button fx:id="update" layoutX="119.0" layoutY="5.0" mnemonicParsing="false" onAction="#updateTest" prefHeight="31.0" prefWidth="95.0" styleClass="btn-update" stylesheets="@../Styles/SystemStyles.css" text="    Update " />
+                        <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="122.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/refresh-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="37.0" fitWidth="111.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/medication-icon-16-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="224.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/jar_delete__1_-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="140.0" prefHeight="41.0" prefWidth="364.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+                     <children>
+                        <ImageView fitHeight="72.0" fitWidth="31.0" layoutX="36.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/122932.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="LaboratorySearch" layoutX="67.0" layoutY="5.0" onKeyPressed="#L_search" prefHeight="31.0" prefWidth="251.0" promptText="Search" style="-fx-background-radius: 10px;" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content></Tab>
+  </tabs>
+</TabPane>
