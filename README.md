@@ -1,6 +1,6 @@
 <h1> Healthcare Management System</h1>
 
-Healthcare Management System is a Hospital Management System using **JavaFx, Windows Forms and Oracle Database, applying OOP and design Patterns Concepts.**
+Healthcare Management System (Desktop app) is a hospital management system that uses **JavaFX, Windows Forms, and Oracle database while applying OOP, design pattern concepts, SOLID principles, refactoring, and clean coding.**
 </br></br>
 
 <h1> Description </h1>
@@ -14,20 +14,22 @@ This project is for hospital workflow management and has multiple views:
 
 <h1> Prerequisites </h1>
 
-- Install Netbeans
-- Install JasperReports
-- Any Oracle Database
+- Install Netbeans IDE 8.2 & JDK 8u202 
+- Install MYSQL JDBC Driver 5.1 
+- Install Xampp 
+- Install JasperReports 
+- Any Oracle Database 
 
 <h1>Getting into the project</h1>
 
 **<h3>Schema</h3>** 
- [Database SQL Script](db/Healthcare_Database.txt)</br>
- [JasperReport Script](db/JasperReport%20Script.txt)</br>
+ [Database SQL Script](Healthcare_Database.txt)</br>
+ [JasperReport Script](JasperReport%20Script.txt)</br>
 
 **<h1> Login page </h1>** 
 - Each user can log in to their account
 </br>
-<p align="left"> <img src="https://github.com/amira921/Healthcare-Management-System/blob/main/screenshot/login.PNG" alt="" width="722" height="534"/>
+<p align="left"> <img src="https://github.com/amira921/Healthcare-Management-System/blob/main/Screenshots/login%20page.PNG" alt="" width="722" height="534"/>
 
 **<h1> Change Password page </h1>**
 
