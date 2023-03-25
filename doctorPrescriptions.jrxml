@@ -68,21 +68,21 @@ WHERE
 			<staticText>
 				<reportElement x="51" y="10" width="240" height="20" forecolor="#0F4273" uuid="27029f7d-3e70-4ff9-be52-280ff1ecb9da"/>
 				<textElement>
-					<font fontName="Aharoni" size="13"/>
+					<font fontName="Arial" size="13"/>
 				</textElement>
 				<text><![CDATA[HealthCare Management System]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="165" y="50" width="130" height="30" forecolor="#0F4273" uuid="ae0a7cc8-bf84-4640-94a6-d2cb46b34659"/>
 				<textElement>
-					<font fontName="Aharoni" size="20"/>
+					<font fontName="Arial" size="20"/>
 				</textElement>
 				<text><![CDATA[Prescription]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="150" y="120" width="30" height="20" forecolor="#0F4273" uuid="112137eb-aada-4db2-9360-6cfb1561e4f9"/>
 				<textElement>
-					<font fontName="Aharoni" size="18"/>
+					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[Dr.]]></text>
 			</staticText>
@@ -94,16 +94,16 @@ WHERE
 				<textFieldExpression><![CDATA[$F{E_Name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="180" width="51" height="20" forecolor="#0F4273" uuid="ee266832-daa0-42b3-be98-3139a797fc80"/>
+				<reportElement x="0" y="170" width="51" height="25" forecolor="#0F4273" uuid="ee266832-daa0-42b3-be98-3139a797fc80"/>
 				<textElement>
-					<font fontName="Aharoni" size="15"/>
+					<font fontName="Arial" size="15"/>
 				</textElement>
 				<text><![CDATA[Name: ]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="203" y="210" width="135" height="20" forecolor="#0F4273" uuid="428380eb-7fbe-4cef-a081-bf36e200b3fc"/>
 				<textElement>
-					<font fontName="Aharoni" size="13"/>
+					<font fontName="Arial" size="13"/>
 				</textElement>
 				<text><![CDATA[Date of Consultation: ]]></text>
 			</staticText>
@@ -143,7 +143,7 @@ WHERE
 			<staticText>
 				<reportElement x="205" y="240" width="130" height="20" forecolor="#0F4273" uuid="905f2c87-1c90-4df3-a734-013ba61fe1f0"/>
 				<textElement>
-					<font fontName="Aharoni" size="13"/>
+					<font fontName="Arial" size="13"/>
 				</textElement>
 				<text><![CDATA[Next Appointment]]></text>
 			</staticText>

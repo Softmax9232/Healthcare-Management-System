@@ -58,42 +58,42 @@ and `bill`.`Patient_Id`= $P{id}]]>
 			<staticText>
 				<reportElement x="40" y="10" width="240" height="20" forecolor="#0F4273" uuid="5ec81882-f28b-4a0b-a71d-8fd3065afc11"/>
 				<textElement>
-					<font fontName="Aharoni" size="13"/>
+					<font fontName="Arial" size="13"/>
 				</textElement>
 				<text><![CDATA[HealthCare Management System]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="140" y="70" width="80" height="50" forecolor="#0F4273" uuid="4179ed2b-2b52-48fa-a5be-31e9704d5170"/>
 				<textElement>
-					<font fontName="Aharoni" size="40"/>
+					<font fontName="Arial" size="40"/>
 				</textElement>
 				<text><![CDATA[Bill]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="15" y="340" width="100" height="30" forecolor="#0F4273" uuid="a431ffe2-a670-4312-8af6-0445295a13af"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="12"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[Examination Cost]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="16" y="260" width="92" height="20" forecolor="#0F4273" uuid="91c7b910-0bc4-4bc8-9f51-2be94321e7d7"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="12"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[Test Cost]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="16" y="220" width="92" height="20" forecolor="#0F4273" uuid="9a2f3286-edd2-451f-95d3-78ec72098591"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="12"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[Medicine Cost]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="16" y="300" width="92" height="20" forecolor="#0F4273" uuid="504b2cb2-e238-43c6-8d4d-9325356f2b6e"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="12"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[Room Cost]]></text>
 			</staticText>
@@ -101,14 +101,14 @@ and `bill`.`Patient_Id`= $P{id}]]>
 				<reportElement x="12" y="410" width="80" height="20" forecolor="#208DA1" uuid="5ec0d8cf-82c7-4583-a2c4-52bc77910618"/>
 				<box topPadding="2"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="16"/>
+					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[Total Cost]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="15" y="178" width="100" height="24" forecolor="#0F4273" uuid="4a15737c-9673-4cce-bd93-2242f8c2a462"/>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="12"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[Patient Name]]></text>
 			</staticText>
@@ -136,42 +136,42 @@ and `bill`.`Patient_Id`= $P{id}]]>
 			<textField>
 				<reportElement x="190" y="340" width="190" height="30" forecolor="#0F4273" uuid="eb479648-72bf-4df9-9bde-6e12e707d334"/>
 				<textElement>
-					<font fontName="Aharoni" size="20"/>
+					<font fontName="Arial" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Examination_cost}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="190" y="260" width="190" height="20" forecolor="#0F4273" uuid="9bdf3a6c-e852-4a4d-a6b2-111adee965dd"/>
 				<textElement>
-					<font fontName="Aharoni" size="20"/>
+					<font fontName="Arial" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{test_cost}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="190" y="299" width="190" height="25" forecolor="#0F4273" uuid="3955c282-47f1-4728-b798-4cdfae3f774f"/>
 				<textElement>
-					<font fontName="Aharoni" size="20"/>
+					<font fontName="Arial" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{room_cost}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="190" y="220" width="190" height="20" forecolor="#0F4273" uuid="754b92bc-7bd4-4377-8b81-76b9547e17af"/>
 				<textElement>
-					<font fontName="Aharoni" size="20"/>
+					<font fontName="Arial" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{medicine_cost}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="190" y="410" width="100" height="30" forecolor="#208DA1" uuid="02d6646c-b97d-43a7-a03c-08c40c0a08b7"/>
 				<textElement>
-					<font fontName="Aharoni" size="22"/>
+					<font fontName="Arial" size="22"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="320" y="130" width="220" height="20" forecolor="#208DA1" uuid="9e1433d4-7125-4b95-8f9f-a6c5248dce54"/>
 				<textElement>
-					<font fontName="Aharoni" size="18"/>
+					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Payment_date}]]></textFieldExpression>
 			</textField>
@@ -180,7 +180,7 @@ and `bill`.`Patient_Id`= $P{id}]]>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left">
-					<font fontName="Aharoni" size="13"/>
+					<font fontName="Arial" size="13"/>
 				</textElement>
 				<text><![CDATA[Payment Date]]></text>
 			</staticText>

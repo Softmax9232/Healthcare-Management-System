@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Reciptionist.billTab">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane layoutX="29.0" layoutY="185.0" prefHeight="364.0" prefWidth="324.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+               <children>
+                  <DatePicker fx:id="bill_date" layoutX="86.0" layoutY="66.0" prefHeight="32.0" prefWidth="154.0" promptText="Date" />
+                  <TextField fx:id="bill_examination" layoutX="85.0" layoutY="110.0" onKeyTyped="#validateExaminationText" prefHeight="29.0" prefWidth="156.0" promptText="Examination Cost" style="-fx-background-radius: 10px;" />
+                  <TextField fx:id="bill_medicine" layoutX="86.0" layoutY="149.0" onKeyTyped="#validateMedicineText" prefHeight="29.0" prefWidth="154.0" promptText="Medicine Cost" style="-fx-background-radius: 10px;" />
+                  <Button layoutX="134.0" layoutY="275.0" mnemonicParsing="false" onAction="#addBill" prefHeight="24.0" prefWidth="57.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="Add" />
+                  <TextField fx:id="bill_test" layoutX="85.0" layoutY="187.0" onKeyTyped="#validateTestText" prefHeight="29.0" prefWidth="154.0" promptText="Test Cost" style="-fx-background-radius: 10px;" />
+                  <TextField fx:id="bill_room" layoutX="86.0" layoutY="225.0" onKeyTyped="#validateRoomText" prefHeight="29.0" prefWidth="154.0" promptText="Room Cost" style="-fx-background-radius: 10px;" />
+                  <TextField fx:id="patientName" editable="false" layoutX="84.0" layoutY="25.0" prefHeight="29.0" prefWidth="156.0" promptText="Patient Name" style="-fx-background-radius: 10px;" />
+                  <TextField fx:id="total" editable="false" layoutX="167.0" layoutY="323.0" prefHeight="29.0" prefWidth="74.0" style="-fx-background-radius: 10px;" />
+                  <Text fill="WHITE" layoutX="86.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cost">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button layoutX="906.0" layoutY="11.0" mnemonicParsing="false" onAction="#generateBillReport" prefHeight="39.0" prefWidth="87.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="Print Bill">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#64c68e" layoutX="81.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Bill">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="96.0" fitWidth="88.0" layoutX="14.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/bill.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="408.0" layoutY="128.0" orientation="VERTICAL" prefHeight="440.0" prefWidth="6.0" style="-fx-background-color: #7ec384;" />
+            <Pane layoutX="24.0" layoutY="128.0" prefHeight="48.0" prefWidth="333.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+               <children>
+                  <Button layoutX="222.0" layoutY="9.0" mnemonicParsing="false" onAction="#loadData" prefHeight="31.0" prefWidth="81.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="   Search" />
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="229.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/search%20button.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="billsearch" focusTraversable="false" layoutX="112.0" layoutY="10.0" prefHeight="31.0" prefWidth="80.0" style="-fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+                  <Text fill="WHITE" layoutX="11.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by ID" wrappingWidth="92.13671875">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TableView fx:id="RoomBill" layoutX="481.0" layoutY="281.0" prefHeight="153.0" prefWidth="402.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+               <columns>
+                  <TableColumn fx:id="RoomType" prefWidth="96.0" text="Room Type" />
+                  <TableColumn fx:id="RoomDuration" prefWidth="108.0" text="room duration" />
+                  <TableColumn fx:id="RoomCost" prefWidth="91.0" text="Cost" />
+                  <TableColumn fx:id="roomDate" prefWidth="108.0" text="Assigned Date" />
+               </columns>
+            </TableView>
+            <TableView fx:id="MedicineBill" layoutX="477.0" layoutY="448.0" prefHeight="109.0" prefWidth="406.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+               <columns>
+                  <TableColumn fx:id="PMed" prefWidth="106.0" text="Medicine name" />
+                  <TableColumn fx:id="MedCost" prefWidth="65.0" text="Cost" />
+                  <TableColumn fx:id="MedQuantity" prefWidth="101.0" text="Quantity" />
+                  <TableColumn fx:id="MedDate" prefWidth="134.0" text="Date " />
+               </columns>
+            </TableView>
+            <TableView fx:id="TestBill" layoutX="483.0" layoutY="128.0" prefHeight="141.0" prefWidth="400.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+               <columns>
+                  <TableColumn fx:id="Ptest" prefWidth="143.0" text="Test name" />
+                  <TableColumn fx:id="TestCost" prefWidth="120.0" text="Cost " />
+                  <TableColumn fx:id="TestDate" prefWidth="137.0" text="Date" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

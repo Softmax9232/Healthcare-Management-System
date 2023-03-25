@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Doctor.HomePageController">
+   <children>
+      <ImageView fitHeight="97.0" fitWidth="99.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/doctor.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="7.0" layoutY="165.0" prefHeight="366.0" prefWidth="364.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <DatePicker fx:id="PDATE" disable="true" editable="false" focusTraversable="false" layoutX="105.0" layoutY="178.0" opacity="0.76" prefHeight="26.0" prefWidth="155.0" promptText="Date of Birth" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="patientname" disable="true" editable="false" focusTraversable="false" layoutX="10.0" layoutY="74.0" opacity="0.76" prefHeight="26.0" prefWidth="147.0" promptText="Name" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="patientweight" focusTraversable="false" layoutX="189.0" layoutY="107.0" onKeyTyped="#validateWeightText" prefHeight="26.0" prefWidth="155.0" promptText="Name" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" text="Weight" />
+            <TextField fx:id="patientheight" focusTraversable="false" layoutX="189.0" layoutY="142.0" onKeyTyped="#validateHeightText" prefHeight="26.0" prefWidth="155.0" promptText="Name" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" text="Height" />
+            <DatePicker fx:id="Pappoint" disable="true" editable="false" focusTraversable="false" layoutX="10.0" layoutY="211.0" opacity="0.76" prefHeight="26.0" prefWidth="147.0" promptText="Appointment" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="patientemail" disable="true" editable="false" focusTraversable="false" layoutX="10.0" layoutY="142.0" opacity="0.76" prefHeight="26.0" prefWidth="147.0" promptText="Name" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" text="Email" />
+            <TextField fx:id="patientphone" disable="true" editable="false" focusTraversable="false" layoutX="10.0" layoutY="107.0" opacity="0.76" prefHeight="26.0" prefWidth="147.0" promptText="Name" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" text="Phone" />
+            <DatePicker fx:id="nextAppoint" focusTraversable="false" layoutX="10.0" layoutY="244.0" prefHeight="26.0" prefWidth="147.0" promptText="Next Appointment" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <ComboBox fx:id="Pgender" disable="true" layoutX="189.0" layoutY="74.0" opacity="0.76" prefHeight="27.0" prefWidth="155.0" promptText="Gender" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <ComboBox fx:id="Time" disable="true" layoutX="195.0" layoutY="211.0" opacity="0.76" prefHeight="27.0" prefWidth="155.0" promptText="Time" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <ComboBox fx:id="NTime" editable="true" layoutX="195.0" layoutY="244.0" prefHeight="27.0" prefWidth="155.0" promptText="Time" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <ComboBox fx:id="PBlood" editable="true" layoutX="189.0" layoutY="42.0" prefHeight="27.0" prefWidth="155.0" promptText="Blood Group" style="-fx-background-color: #fff;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="patientid" disable="true" editable="false" focusTraversable="false" layoutX="10.0" layoutY="42.0" opacity="0.76" prefHeight="26.0" prefWidth="147.0" promptText="Patient id" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+            <TextField fx:id="Pprescription" focusTraversable="false" layoutX="15.0" layoutY="275.0" prefHeight="80.0" prefWidth="334.0" promptText="Illness Issue" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" styleClass="textFields" stylesheets="@../Styles/SystemStyles.css" />
+         </children>
+      </Pane>
+      <Text fill="#8d8888" layoutX="101.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="75.390625">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#64c68e" layoutX="165.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr/">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="name" ellipsisString="" layoutX="187.0" layoutY="57.0" prefHeight="20.0" prefWidth="184.0" textFill="#64c68e" AnchorPane.topAnchor="57.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="DoctorTable" layoutX="390.0" layoutY="117.0" onMouseClicked="#getSelectedData" prefHeight="433.0" prefWidth="559.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+         <columns>
+            <TableColumn fx:id="patient_id" prefWidth="36.0" text="id" />
+            <TableColumn fx:id="patient_name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="gender" prefWidth="59.0" text="Gender" />
+            <TableColumn fx:id="dob" text="Date of Birth" />
+            <TableColumn fx:id="email" prefWidth="62.0" text="Email" />
+            <TableColumn fx:id="phone" prefWidth="62.0" text="Phone" />
+            <TableColumn fx:id="blood" prefWidth="84.0" text="Blood Group" />
+            <TableColumn fx:id="weight" prefWidth="60.0" text="Weight" />
+            <TableColumn fx:id="height" prefWidth="62.0" text="Height" />
+            <TableColumn fx:id="prescription" prefWidth="100.0" text="Prescription" />
+            <TableColumn fx:id="appointment" prefWidth="86.0" text="Appointment" />
+            <TableColumn fx:id="Atime" prefWidth="62.0" text="Time" />
+            <TableColumn fx:id="Nappointment" prefWidth="86.0" text="Next Appointment" />
+            <TableColumn fx:id="Ntime" prefWidth="62.0" text="Time" />
+         </columns>
+         
+      </TableView>
+      <Button layoutX="860.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout" prefHeight="29.0" prefWidth="83.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="LogOut" />
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="860.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logout%20button.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="10.0" layoutY="115.0" prefHeight="41.0" prefWidth="358.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="31.0" layoutX="36.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search%20button.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" layoutX="67.0" layoutY="7.0" onKeyPressed="#search" prefHeight="27.0" prefWidth="251.0" promptText="Search" style="-fx-background-radius: 10px; -fx-background-color: #fff;" />
+         </children>
+      </Pane>
+      <Button layoutX="66.0" layoutY="536.0" mnemonicParsing="false" onAction="#updateData" prefHeight="29.0" prefWidth="83.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="   Update" />
+      <Button layoutX="187.0" layoutY="536.0" mnemonicParsing="false" onAction="#printPrescription" prefHeight="31.0" prefWidth="120.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="      prescription ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="66.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/update%20button%202.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="187.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/prescription.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

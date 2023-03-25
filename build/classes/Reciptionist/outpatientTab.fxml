@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Reciptionist.outpatientTab">
+   <children>
+      <ImageView fitHeight="145.0" fitWidth="148.0" layoutX="-1.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/outpatient.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="17.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="370.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <DatePicker fx:id="birthdate" focusTraversable="false" layoutX="14.0" layoutY="227.0" prefHeight="30.0" prefWidth="149.0" promptText="Birthday" />
+            <TextField fx:id="email" focusTraversable="false" layoutX="14.0" layoutY="154.0" prefHeight="30.0" promptText="Email" style="-fx-background-radius: 10px;" />
+            <TextField fx:id="phone" focusTraversable="false" layoutX="14.0" layoutY="118.0" onKeyTyped="#validatePhoneText" prefHeight="30.0" promptText="Phone" style="-fx-background-radius: 10px;" />
+            <TextField fx:id="name" focusTraversable="false" layoutX="14.0" layoutY="39.0" onKeyTyped="#validateNameText" prefHeight="30.0" promptText="Name" style="-fx-background-radius: 10px;" />
+            <TextField fx:id="address" focusTraversable="false" layoutX="14.0" layoutY="191.0" prefHeight="30.0" promptText="Address" style="-fx-background-radius: 10px;" />
+            <Label layoutX="14.0" layoutY="14.0" text="Basic Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="14.0" prefHeight="21.0" prefWidth="150.0" text="Disease Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Disease" editable="true" focusTraversable="false" layoutX="193.0" layoutY="39.0" prefHeight="30.0" prefWidth="150.0" promptText="Disease" visibleRowCount="8" />
+            <TextField fx:id="ssn" focusTraversable="false" layoutX="14.0" layoutY="78.0" onKeyTyped="#validateSsnText" prefHeight="30.0" promptText="SSN" style="-fx-background-radius: 10px;" />
+            <Separator layoutX="179.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="6.0" />
+            <TextField fx:id="doctorID" focusTraversable="false" layoutX="194.0" layoutY="78.0" onKeyTyped="#validateIdText" prefHeight="30.0" promptText="Doctor id" style="-fx-background-radius: 10px;" />
+            <DatePicker fx:id="Appointment" focusTraversable="false" layoutX="194.0" layoutY="118.0" prefHeight="30.0" prefWidth="149.0" promptText="Appointment" />
+            <ComboBox fx:id="Gender" layoutX="14.0" layoutY="264.0" prefHeight="30.0" prefWidth="150.0" promptText="Gender" />
+         </children>
+      </AnchorPane>
+      <Text fill="#8d8888" layoutX="92.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="101.390625">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#64c68e" layoutX="92.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Out Patient " wrappingWidth="121.412109375">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#64c68e" layoutX="115.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registeration" wrappingWidth="121.412109375">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Pane layoutX="27.0" layoutY="505.0" prefHeight="41.0" prefWidth="333.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <Button fx:id="add" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#insertData" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="    Add" />
+            <Button layoutX="224.0" layoutY="5.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="31.0" prefWidth="95.0" styleClass="btn-add" stylesheets="@../Styles/SystemStyles.css" text="     Delete " />
+            <Button fx:id="update" layoutX="119.0" layoutY="5.0" mnemonicParsing="false" onAction="#updateData" prefHeight="31.0" prefWidth="95.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="    Update " />
+            <ImageView fitHeight="30.0" fitWidth="63.0" layoutX="109.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/update%20button.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="224.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/delete%20button.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/add%20button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button layoutX="909.0" layoutY="6.0" mnemonicParsing="false" onAction="#logout" prefHeight="29.0" prefWidth="83.0" styleClass="btn-search" stylesheets="@../Styles/SystemStyles.css" text="LogOut" />
+      <ScrollPane layoutX="433.0" layoutY="132.0" prefHeight="416.0" prefWidth="568.0">
+         <content>
+            <TableView fx:id="PatientTable" onMouseClicked="#getSelectedData" prefHeight="488.0" prefWidth="940.0" styleClass="table-row-cell" stylesheets="@../Styles/SystemStyles.css">
+               <columns>
+                  <TableColumn fx:id="p_id" prefWidth="82.0" text="ID" />
+                  <TableColumn fx:id="p_name" prefWidth="82.0" text="Name" />
+                  <TableColumn fx:id="p_phone" prefWidth="86.0" text="Phone" />
+                  <TableColumn fx:id="p_address" prefWidth="87.0" text="Address" />
+                  <TableColumn fx:id="p_gender" prefWidth="48.0" text="Gender" />
+                  <TableColumn fx:id="p_dob" prefWidth="87.0" text="Date of Birth" />
+                  <TableColumn fx:id="p_ssn" text="SSN" />
+                  <TableColumn fx:id="p_email" prefWidth="123.0" text="Email" />
+                  <TableColumn fx:id="p_illness" prefWidth="79.0" text="Illness Issue" />
+                  <TableColumn fx:id="p_doctorid" prefWidth="92.0" text="Doctor id" />
+                  <TableColumn fx:id="p_appointment" prefWidth="97.0" text="Appointment" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="909.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logout%20button.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="20.0" layoutY="139.0" prefHeight="41.0" prefWidth="364.0" style="-fx-background-color: #7ec384; -fx-background-radius: 10px;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="31.0" layoutX="36.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search%20button.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" layoutX="67.0" layoutY="5.0" onKeyPressed="#search" prefHeight="31.0" prefWidth="251.0" promptText="Search" style="-fx-background-radius: 10px;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
