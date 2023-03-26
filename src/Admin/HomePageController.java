@@ -189,22 +189,22 @@ public class HomePageController extends Controller implements Initializable {
     }
     
     @FXML
-    public void validatePhoneText(){
+    private void validatePhoneText(){
         input.numericOnly(Ephone);
     }
     
     @FXML
-    public void validateSsnText(){
+    private void validateSsnText(){
         input.numericOnly(Essn);
     }
     
     @FXML
-    public void validateSalaryText(){
+    private void validateSalaryText(){
         input.numericAndFloatingOnly(Esalary);
     }
     
     @FXML
-    public void validateNameText(){
+    private void validateNameText(){
         input.lettersOnly(Ename);
     }
     

@@ -151,22 +151,22 @@ public class billTab {
     }
     
     @FXML
-    public void validateTestText(){
+    private void validateTestText(){
         input.numericAndFloatingOnly(bill_test);
     }
     
     @FXML
-    public void validateMedicineText(){
+    private void validateMedicineText(){
         input.numericAndFloatingOnly(bill_medicine);
     }
     
     @FXML
-    public void validateExaminationText(){
+    private void validateExaminationText(){
         input.numericAndFloatingOnly(bill_examination);
     }
     
     @FXML
-    public void validateRoomText(){
+    private void validateRoomText(){
         input.numericAndFloatingOnly(bill_room);
     }
 }

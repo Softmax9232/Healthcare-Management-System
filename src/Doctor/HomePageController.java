@@ -217,12 +217,12 @@ public class HomePageController extends Controller implements Initializable {
     }
     
     @FXML
-    public void validateWeightText(){
+    private void validateWeightText(){
         input.numericAndFloatingOnly(patientweight);
     }
     
     @FXML
-    public void validateHeightText(){
+    private void validateHeightText(){
         input.numericAndFloatingOnly(patientheight);
     }
     

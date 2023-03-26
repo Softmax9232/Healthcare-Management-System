@@ -181,22 +181,22 @@ public class outpatientTab extends Controller implements Initializable {
     }
 
     @FXML
-    public void validateIdText(){
+    private void validateIdText(){
         input.numericOnly(doctorID);
     }
     
     @FXML
-    public void validateSsnText(){
+    private void validateSsnText(){
         input.numericOnly(ssn);
     }
     
     @FXML
-    public void validatePhoneText(){
+    private void validatePhoneText(){
         input.numericOnly(phone);
     }
     
     @FXML
-    public void validateNameText(){
+    private void validateNameText(){
         input.numericOnly(name);
     }
 }

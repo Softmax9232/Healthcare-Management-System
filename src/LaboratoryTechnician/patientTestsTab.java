@@ -106,7 +106,7 @@ public class patientTestsTab extends Controller implements Initializable {
     }
 
     @FXML
-    public void validateIdText(){
+    private void validateIdText(){
         new validateInputs().numericAndFloatingOnly(id);
     }
     

@@ -124,12 +124,12 @@ public class PatientDrugsTab extends Controller implements Initializable {
     }
     
     @FXML
-    public void validateIdText(){
+    private void validateIdText(){
         input.numericAndFloatingOnly(patient_id);
     }
     
     @FXML
-    public void validateQuantityText(){
+    private void validateQuantityText(){
         input.numericAndFloatingOnly(quantity);
     }
     

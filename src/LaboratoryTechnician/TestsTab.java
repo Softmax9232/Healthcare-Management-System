@@ -127,12 +127,12 @@ public class TestsTab extends Controller implements Initializable {
     }
     
     @FXML
-    public void validateCostText(){
+    private void validateCostText(){
         new validateInputs().numericAndFloatingOnly(testcost);
     }
     
     @FXML
-    public void validateNameText(){
+    private void validateNameText(){
         new validateInputs().lettersOnly(testname);
     }
 }

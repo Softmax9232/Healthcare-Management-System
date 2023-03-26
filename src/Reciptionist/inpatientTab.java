@@ -183,37 +183,37 @@ public class inpatientTab extends Controller implements Initializable {
     }
     
     @FXML
-    public void validateNurseText(){
+    private void validateNurseText(){
         input.numericOnly(nurse_id);
     }
     
     @FXML
-    public void validateDoctorText(){
+    private void validateDoctorText(){
         input.numericOnly(doc_id);
     }
     
     @FXML
-    public void validateRoomText(){
+    private void validateRoomText(){
         input.numericOnly(room_id);
     }
     
     @FXML
-    public void validateSsnText(){
+    private void validateSsnText(){
         input.numericOnly(ssn);
     }
     
     @FXML
-    public void validatePhoneText(){
+    private void validatePhoneText(){
         input.numericOnly(relative_phone);
     }
     
    @FXML
-    public void validatePatientName(){
+    private void validatePatientName(){
         input.lettersOnly(name);
     }
     
     @FXML
-    public void validateRelativeName(){
+    private void validateRelativeName(){
         input.lettersOnly(name);
     }
  
