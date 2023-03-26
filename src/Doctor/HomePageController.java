@@ -9,6 +9,8 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -57,12 +59,21 @@ public class HomePageController extends Controller implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        LoadDataInTable();
-        name.setText(controller.Employee_name);
-        PBlood.setItems(bloodGroupList);
-        Pgender.setItems(genderList);
-        Time.setItems(time);
-        NTime.setItems(time);
+        try {
+            if (database.DatabaseConnection.getConnection() == null) {
+                new utility.pageControl().openFxml("Doctor", "HomePageController");
+                new alerts().makeInfoAlert("Check the Connection with Database");
+            } else {
+                LoadDataInTable();
+                name.setText(controller.Employee_name);
+                PBlood.setItems(bloodGroupList);
+                Pgender.setItems(genderList);
+                Time.setItems(time);
+                NTime.setItems(time);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(HomePageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @Override

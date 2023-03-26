@@ -4,6 +4,8 @@ import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -39,7 +41,15 @@ public class patientTestsTab extends Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TestCombo.setItems(testList);
-        LoadDataInTable();
+        try {
+            if (database.DatabaseConnection.getConnection() == null) {
+                new alerts().makeInfoAlert("Check the Connection with Database");
+            } else {
+                LoadDataInTable();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(patientTestsTab.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

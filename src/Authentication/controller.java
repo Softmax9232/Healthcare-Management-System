@@ -1,6 +1,5 @@
 package Authentication;
 
-import java.lang.Object;
 import utility.*;
 import java.sql.*;
 import javafx.fxml.FXML;
@@ -49,7 +48,7 @@ public class controller {
             }
 
         } catch (SQLException ex) {
-            alert.makeInfoAlert(ex.getMessage());
+            alert.makeInfoAlert("Check the Database Connection");
         }
         return true;
     }

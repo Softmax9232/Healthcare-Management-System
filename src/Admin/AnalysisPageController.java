@@ -1,6 +1,7 @@
 package Admin;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -30,11 +31,15 @@ public class AnalysisPageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        ArrayList<Integer> list, list2;
-        ArrayList<Float> list3;
-
         try {
+            if (database.DatabaseConnection.getConnection() == null){
+                new utility.pageControl().openFxml("Admin", "AnalysisPage");
+                new alerts().makeInfoAlert("Check the Connection with Database");
+            }
+            else{
+            ArrayList<Integer> list, list2;
+            ArrayList<Float> list3;
+            
             list = new database.Analysis().BarChart();
             XYChart.Series doctors = new XYChart.Series();
             doctors.setName("Number of Employees");
@@ -63,8 +68,11 @@ public class AnalysisPageController implements Initializable {
                     new PieChart.Data("Salary (>5000 & <10000)", list3.get(1)),
                     new PieChart.Data("Salary >10000", list3.get(2)));
             piechart_salary.setData(bar_salary);
+            }
         } catch (ClassNotFoundException ex) {
             new alerts().makeInfoAlert(ex.getMessage());
+        } catch (SQLException ex) {
+            Logger.getLogger(AnalysisPageController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
