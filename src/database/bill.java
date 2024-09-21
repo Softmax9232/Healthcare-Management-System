@@ -5,10 +5,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import utility.*;
 
+
 public class bill {
     
     PreparedStatement ps = null;
     ResultSet rs = null;
+    ResultSet rs1 = null;
     String query;
     
     private Connection getConnection() throws SQLException{
