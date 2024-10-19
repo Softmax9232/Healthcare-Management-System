@@ -26,14 +26,6 @@ This project is for hospital workflow management and has multiple views:
  [Database SQL Script](Healthcare_Database.txt)</br>
  [JasperReport Script](JasperReport%20Script.txt)</br>
 
-**<h1> Login page </h1>** 
-- Each user can log in to their account
-</br>
-<p align="left"> <img src="https://github.com/amira921/Healthcare-Management-System/blob/main/Screenshots/login%20page.PNG" alt="" width="722" height="534"/>
-
-**<h1> Change Password page </h1>**
-
-
 - The user enters their username and then clicks **Recover button**.
 
 - The system displays a recovery question, which the user answers before pressing **Submit button**.
